@@ -1,18 +1,19 @@
 ### What is Enum Boosterpack?
 
 Enum Boosterpack is a set of sourcegenerators which creates extension methods for your enums.
-* ToFastString - ToString() on enum-values is slow, ToFastString() is about 10x faster.
+* ToFastString - ToString() on enum-values is slow, ToFastString() is about 25x faster.
 * AutoDescriptor - Creates a GetDescription() extension method that returns the value from enum-values decorated with a Description-attribute, about 30x times faster than reflection.
 
 ### Limitations
-As it is early days, the following limitations apply:
-* C# 8 or later
+The following limitations apply:
+* Currently C# 8 or later
+* No current support for flags
 * Supports public and internal enums
-* No (current) support for flags, but planned
+
 
 ### How do I get started?
 
-Enum Boosterpack will automatically identify and create ToFastString() extension methods for your public and internal enums:
+Enum Boosterpack will automatically identify and create ToFastString() extension methods for your public and internal enums. Declare an enum:
 
 ```csharp
     internal enum Color
@@ -27,7 +28,7 @@ Then in your application code, call ToFastString() instead of ToString() on your
 var redString = Color.Red.ToFastString();
 ```
 
-To generate GetDescription() extension methods, add a Describable-attribute to your enums:
+To generate GetDescription() extension methods, add a Describable-attribute to your enums. Make sure all enum-values have a Description-attribute:
 ```csharp
 using H7P.AutoDescriptor;
 
