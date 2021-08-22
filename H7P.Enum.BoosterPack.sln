@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "H7P.Enum.BoosterPack", "src\Enum.BoosterPack\H7P.Enum.BoosterPack.csproj", "{8E4D7735-5803-4441-AB6A-DB40ECA38A99}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "H7P.Enum.BoosterPack.IntegrationTests", "src\IntegrationTests\H7P.Enum.BoosterPack.Tests\H7P.Enum.BoosterPack.IntegrationTests.csproj", "{AC6A73EC-2D78-49E5-9C10-1E5A4A9ADBF6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E4D7735-5803-4441-AB6A-DB40ECA38A99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E4D7735-5803-4441-AB6A-DB40ECA38A99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E4D7735-5803-4441-AB6A-DB40ECA38A99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E4D7735-5803-4441-AB6A-DB40ECA38A99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC6A73EC-2D78-49E5-9C10-1E5A4A9ADBF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC6A73EC-2D78-49E5-9C10-1E5A4A9ADBF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC6A73EC-2D78-49E5-9C10-1E5A4A9ADBF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC6A73EC-2D78-49E5-9C10-1E5A4A9ADBF6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F76ECB44-A4CB-4F88-BCDC-E19B4A40E3C5}
+	EndGlobalSection
+EndGlobal

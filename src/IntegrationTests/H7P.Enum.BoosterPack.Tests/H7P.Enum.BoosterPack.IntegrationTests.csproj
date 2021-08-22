@@ -1,0 +1,75 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AutoDescriptor\Data\ExpectedGeneratedInternalEnum.cs" />
+    <Compile Remove="AutoDescriptor\Data\ExpectedGeneratedPublicEnum.cs" />
+    <Compile Remove="AutoDescriptor\Data\InternalValidEnumSource.cs" />
+    <Compile Remove="AutoDescriptor\Data\InvalidAccessModifierEnumSource.cs" />
+    <Compile Remove="AutoDescriptor\Data\PublicValidEnumSource.cs" />
+    <Compile Remove="AutoDescriptor\Scenarios\InvalidAccessModifierEnumSource.cs" />
+    <Compile Remove="FastString\Data\ExpectedGeneratedInternalEnum.cs" />
+    <Compile Remove="FastString\Data\ExpectedGeneratedPublicEnum.cs" />
+    <Compile Remove="FastString\Data\InternalEnumSource.cs" />
+    <Compile Remove="FastString\Data\PublicEnumSource.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="AutoDescriptor\Data\ExpectedGeneratedInternalEnum.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AutoDescriptor\Data\ExpectedGeneratedPublicEnum.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AutoDescriptor\Data\InvalidAccessModifierEnumSource.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AutoDescriptor\Data\InternalValidEnumSource.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AutoDescriptor\Data\PublicValidEnumSource.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FastString\Data\InvalidAccessModifierEnumSource.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FastString\Data\ExpectedGeneratedInternalEnum.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FastString\Data\ExpectedGeneratedPublicEnum.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FastString\Data\InternalEnumSource.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FastString\Data\PublicEnumSource.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.SourceGenerators.Testing" Version="1.1.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.SourceGenerators.Testing.XUnit" Version="1.1.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Testing.Verifiers.XUnit" Version="1.1.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="3.1.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Enum.BoosterPack\H7P.Enum.BoosterPack.csproj" />
+  </ItemGroup>
+
+</Project>
