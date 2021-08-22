@@ -5,17 +5,21 @@
         <LangVersion>latest</LangVersion>
         <AssemblyName>H7P.AutoEnumDescriptor.SourceGenerator</AssemblyName>
         <RootNamespace>H7P.AutoEnumDescriptor.SourceGenerator</RootNamespace>
+        <RepositoryUrl></RepositoryUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/FredMyklebust/H7P.Enum.BoosterPack</PackageProjectUrl>
+        <Version>0.8.1-beta</Version>
     </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Release' ">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeBuildOutput>false</IncludeBuildOutput>
-    <Version>0.8.0</Version>
+    <Version>0.8.1</Version>
     <Company>H7 Productions</Company>
     <Product>H7P Enum Boosterpack</Product>
     <PackageId>H7P.Enum.BoosterPack</PackageId>
     <Authors>Fred Myklebust</Authors>
-    <Description></Description>
+    <Description>Enum Boosterpack is a set of source generators which creates helpful and performant extension methods for your enums, A fast alternative to ToString(), called ToFastString(), and GetDescription() to extract descriptions from enum values annotated with DescriptionAttributes.</Description>
     <Copyright>Copyright 2021 Fred Myklebust</Copyright>
     <AssemblyName>H7P.Enum.BoosterPack</AssemblyName>
     <RootNamespace>H7P.Enum.BoosterPack</RootNamespace>
