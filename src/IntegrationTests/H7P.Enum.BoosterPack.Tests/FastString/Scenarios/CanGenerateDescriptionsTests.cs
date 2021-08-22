@@ -1,5 +1,4 @@
 ﻿using H7P.AutoEnumDescriptor.SourceGenerator.FastString.SourceGenerator;
-using H7P.Enum.BoosterPack.IntegrationTests;
 using System.Threading.Tasks;
 using Xunit;
 using VerifyCS = CSharpSourceGeneratorVerifier<H7P.AutoEnumDescriptor.SourceGenerator.FastString.SourceGenerator.FastToStringGenerator>;

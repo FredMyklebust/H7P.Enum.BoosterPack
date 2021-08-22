@@ -20,7 +20,7 @@ namespace H7P.Enum.BoosterPack.IntegrationTests
 
         public static string GetSourceContent(string testContext, string fileName)
         {
-            return File.ReadAllText($"{testContext}\\Data\\{fileName}");
+            return File.ReadAllText(Path.Combine(testContext, "Data", fileName));
         }
     }
 
