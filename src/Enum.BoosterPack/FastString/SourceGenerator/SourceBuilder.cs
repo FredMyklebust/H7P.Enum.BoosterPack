@@ -73,14 +73,14 @@ namespace H7P.AutoEnumDescriptor.SourceGenerator.FastString.SourceGenerator
 
         private void AppendMethodGetFastBody()
         {
-            AppendLineWithIndent("return enumValue switch");
+            AppendLineWithIndent("switch(enumValue)");
             AppendLineWithIndent("{");
             IncrementIndent();
             foreach (var enumValue in _enumItem.Values)
             {
-                AppendWithIndent(_enumItem.Name).Append('.').Append(enumValue).Append(" => \"").Append(enumValue).AppendLine("\",");
+                AppendWithIndent("case ").Append(_enumItem.Name).Append('.').Append(enumValue).Append(": return \"").Append(enumValue).AppendLine("\";");
             }
-            AppendLineWithIndent("_ => throw new ArgumentException($\"{enumValue} invalid enum-specified\")");
+            AppendLineWithIndent("default: throw new ArgumentException($\"{enumValue} invalid enum-specified\");");
             DecrementIndent();
             AppendLineWithIndent("};");
         }

@@ -15,11 +15,11 @@ namespace H7P.AutoDescriptor.ConsoleApp
 		/// </returns>
 		public static string GetDescription(this Tilstand enumValue)
 		{
-			return enumValue switch
+			switch(enumValue)
 			{
-				Tilstand.Valid => "Gyldig",
-				Tilstand.Invalid => "Ugyldig",
-				_ => throw new ArgumentException($"{enumValue} does not have an description attribute")
+				case Tilstand.Valid: return "Gyldig";
+				case Tilstand.Invalid: return "Ugyldig";
+				default: throw new ArgumentException($"{enumValue} does not have an description attribute");
 			};
 		}
 	}

@@ -1,5 +1,4 @@
 ﻿using H7P.AutoEnumDescriptor.SourceGenerator.AutoDescriptor.SourceGenerator;
-using H7P.AutoEnumDescriptor.SourceGenerator.Models;
 using System.Text;
 
 namespace H7P.Enum.BoosterPack.AutoDescriptor.SourceGenerator
@@ -74,14 +73,14 @@ namespace H7P.Enum.BoosterPack.AutoDescriptor.SourceGenerator
 
         private void AppendMethodGetDescriptionBody()
         {
-            AppendLineWithIndent("return enumValue switch");
+            AppendLineWithIndent("switch(enumValue)");
             AppendLineWithIndent("{");
             IncrementIndent();
             foreach (var enumValue in _enumItem.KeyValues)
             {
-                AppendWithIndent(_enumItem.Name).Append('.').Append(enumValue.Key).Append(" => \"").Append(enumValue.Value).AppendLine("\",");
+                AppendWithIndent("case ").Append(_enumItem.Name).Append('.').Append(enumValue.Key).Append(": return \"").Append(enumValue.Value).AppendLine("\";");
             }
-            AppendLineWithIndent("_ => throw new ArgumentException($\"{enumValue} does not have an description attribute\")");
+            AppendLineWithIndent("default: throw new ArgumentException($\"{enumValue} does not have an description attribute\");");
             DecrementIndent();
             AppendLineWithIndent("};");
         }

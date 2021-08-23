@@ -7,11 +7,11 @@ namespace H7P.FastString.ConsoleApp
 	{
 		public static string ToFastString(this State enumValue)
 		{
-			return enumValue switch
+			switch(enumValue)
 			{
-				State.Valid => "Valid",
-				State.Invalid => "Invalid",
-				_ => throw new ArgumentException($"{enumValue} invalid enum-specified")
+				case State.Valid: return "Valid";
+				case State.Invalid: return "Invalid";
+				default: throw new ArgumentException($"{enumValue} invalid enum-specified");
 			};
 		}
 	}

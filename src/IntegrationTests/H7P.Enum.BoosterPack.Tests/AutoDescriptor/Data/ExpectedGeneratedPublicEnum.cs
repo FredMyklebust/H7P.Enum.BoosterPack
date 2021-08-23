@@ -15,11 +15,11 @@ namespace H7P.AutoDescriptor.ConsoleApp
 		/// </returns>
 		public static string GetDescription(this Color enumValue)
 		{
-			return enumValue switch
+			switch(enumValue)
 			{
-				Color.Red => "Rød",
-				Color.Green => "Grønn",
-				_ => throw new ArgumentException($"{enumValue} does not have an description attribute")
+				case Color.Red: return "Rød";
+				case Color.Green: return "Grønn";
+				default: throw new ArgumentException($"{enumValue} does not have an description attribute");
 			};
 		}
 	}
