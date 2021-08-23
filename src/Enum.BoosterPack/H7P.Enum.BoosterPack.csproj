@@ -8,13 +8,13 @@
         <RepositoryUrl></RepositoryUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/FredMyklebust/H7P.Enum.BoosterPack</PackageProjectUrl>
-        <Version>0.8.1-beta</Version>
+        <Version>0.8.2-beta</Version>
     </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Release' ">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeBuildOutput>false</IncludeBuildOutput>
-    <Version>0.8.1</Version>
+    <Version>0.8.2</Version>
     <Company>H7 Productions</Company>
     <Product>H7P Enum Boosterpack</Product>
     <PackageId>H7P.Enum.BoosterPack</PackageId>
