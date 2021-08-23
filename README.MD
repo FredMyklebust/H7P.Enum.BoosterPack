@@ -6,7 +6,6 @@ Enum Boosterpack is a set of sourcegenerators which creates extension methods fo
 
 ### Limitations
 The following limitations apply:
-* Currently C# 8 or later
 * No current support for flags
 * Supports public and internal enums
 
