@@ -8,9 +8,9 @@ namespace H7P.Enum.BoosterPack.UnitTests.Scenarios.ToFastStringTests
         [Fact]
         public void All_enum_values_have_ToFastString()
         {
-            Assert.Equal(TrafficLightState.Red.ToString(), TrafficLightState.Red.ToFastString());
-            Assert.Equal(TrafficLightState.Green.ToString(), TrafficLightState.Green.ToFastString());
-            Assert.Equal(TrafficLightState.Yellow.ToString(), TrafficLightState.Yellow.ToFastString());
+            Assert.Equal(nameof(TrafficLightState.Red), TrafficLightState.Red.ToFastString());
+            Assert.Equal(nameof(TrafficLightState.Green), TrafficLightState.Green.ToFastString());
+            Assert.Equal(nameof(TrafficLightState.Yellow), TrafficLightState.Yellow.ToFastString());
         }
     }
 
