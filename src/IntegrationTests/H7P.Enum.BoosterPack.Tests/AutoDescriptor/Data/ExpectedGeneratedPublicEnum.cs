@@ -3,15 +3,15 @@ using H7P.AutoDescriptor.ConsoleApp;
 
 namespace H7P.AutoDescriptor.ConsoleApp
 {
-	internal static class ƓColorExtensions
+	internal static class ƓColorGetDescriptionExtensions
 	{
 		/// <summary>
 		/// Gets the description from the <see cref="System.ComponentModel.DescriptionAttribute"/> for the supplied <see cref="Color"/> value.
 		/// </summary>
-		/// <exception cref="ArgumentException"> Throws if the description for the value is missing, or an invalid value is supplied.</exception> 
-		/// <param name="enumValue"></param>
+		/// <param name="enumValue">The enum to get descriptions from.</param>
+		/// <exception cref="ArgumentException">Throws if the description for the value is missing, or an invalid value is supplied.</exception>
 		/// <returns>
-		/// A <see cref="string"/> with the description.
+		///A <see cref="string"/> with the description.
 		/// </returns>
 		public static string GetDescription(this Color enumValue)
 		{
@@ -19,8 +19,8 @@ namespace H7P.AutoDescriptor.ConsoleApp
 			{
 				case Color.Red: return "Rød";
 				case Color.Green: return "Grønn";
-				default: throw new ArgumentException($"{enumValue} does not have an description attribute");
-			};
+				default: throw new ArgumentException($"Invalid value {enumValue} specified", "enumValue");
+			}
 		}
 	}
 }

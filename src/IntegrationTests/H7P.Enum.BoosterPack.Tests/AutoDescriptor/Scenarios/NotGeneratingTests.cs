@@ -34,7 +34,9 @@ namespace H7P.Enum.BoosterPack.IntegrationTests.AutoDescriptor.Scenarios
                         new DiagnosticResult(DiagnosticTokens.InvalidAccessModifierId, DiagnosticSeverity.Warning).WithArguments("Accessor")
                     }
                 },
-            }.RunAsync();
+            }
+            .RunAsync()
+            .ConfigureAwait(false);
         }
     }
 }

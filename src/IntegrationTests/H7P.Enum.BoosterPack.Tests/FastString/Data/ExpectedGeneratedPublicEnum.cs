@@ -3,7 +3,7 @@ using H7P.FastString.ConsoleApp;
 
 namespace H7P.FastString.ConsoleApp
 {
-	internal static class ƓColorFastStringExtensions
+	internal static class ƓColorToFastStringExtensions
 	{
 		public static string ToFastString(this Color enumValue)
 		{
@@ -11,8 +11,8 @@ namespace H7P.FastString.ConsoleApp
 			{
 				case Color.Red: return "Red";
 				case Color.Green: return "Green";
-				default: throw new ArgumentException($"{enumValue} invalid enum-specified");
-			};
+				default: throw new ArgumentException($"Invalid value {enumValue} specified", "enumValue");
+			}
 		}
 	}
 }

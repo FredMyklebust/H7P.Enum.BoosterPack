@@ -4,7 +4,6 @@ namespace H7P.Enum.BoosterPack.UnitTests.Scenarios.ToFastStringTests
 {
     public class WhenEnumIsInternal
     {
-
         [Fact]
         public void All_enum_values_have_ToFastString()
         {

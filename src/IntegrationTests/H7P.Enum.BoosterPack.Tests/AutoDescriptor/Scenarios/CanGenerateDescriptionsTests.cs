@@ -27,7 +27,9 @@ namespace H7P.Enum.BoosterPack.IntegrationTests.AutoDescriptor.Scenarios
                         TestSourceCreator.CreateExpectedSourceFromFile<DescribableGenerator>(expectedGeneratedName, _testContext, expectedSourceFromFile)
                     }
                 },
-            }.RunAsync();
+            }
+            .RunAsync()
+            .ConfigureAwait(false);
         }
     }
 

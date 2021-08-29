@@ -19,7 +19,9 @@ namespace H7P.Enum.BoosterPack.IntegrationTests.FastString.Scenarios
                 {
                     Sources = { codeToTest }
                 },
-            }.RunAsync();
+            }
+            .RunAsync()
+            .ConfigureAwait(false);
         }
     }
 }

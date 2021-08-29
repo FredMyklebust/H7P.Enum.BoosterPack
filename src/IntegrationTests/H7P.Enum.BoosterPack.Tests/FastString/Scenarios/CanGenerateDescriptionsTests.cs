@@ -26,7 +26,8 @@ namespace H7P.Enum.BoosterPack.IntegrationTests.FastString.Scenarios
                         TestSourceCreator.CreateExpectedSourceFromFile<FastToStringGenerator>(expectedGeneratedName, _testContext, expectedSourceFromFile)
                     }
                 },
-            }.RunAsync();
+            }.RunAsync()
+            .ConfigureAwait(false);
         }
     }
 
