@@ -5,7 +5,7 @@ using VerifyCS = CSharpSourceGeneratorVerifier<H7P.AutoEnumDescriptor.SourceGene
 
 namespace H7P.Enum.BoosterPack.IntegrationTests.FastString.Scenarios
 {
-    public class CanGenerateDescriptionsTests
+    public class CanGetFastStringTests
     {
         private const string _testContext = "FastString";
 
