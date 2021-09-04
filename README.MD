@@ -3,6 +3,7 @@
 Enum Boosterpack is a set of source generators which creates fast extension methods for your enums.
 * AsString() - ToString() on enum-values is slow, AsString() is more than 17x faster on .NET 5, and more than 200x faster on .NET 4.8.
 * AutoDescriptor - Creates a GetDescription() extension method that returns the value from enum-values decorated with a Description-attribute, which is more than 950x times faster on .NET 5.0, and more than 1650x faster on .NET 4.8 than using reflection.
+
 Unlike ToString() and extracting the description-value using reflection, AsString() and GetDescription() doesn't allocate.
 
 
