@@ -1,6 +1,6 @@
 ﻿namespace H7P.FastString.ConsoleApp
 {
-    public class OuterCkass1
+    public class OuterClass1
     {
         private enum Access
         {
@@ -9,7 +9,7 @@
         }
     }
 
-    public class OuterClass1
+    public class OuterClass2
     {
         protected enum Access2
         {
@@ -19,7 +19,7 @@
         }
     }
 
-    public class OuterCkass3
+    public class OuterClass3
     {
         protected internal enum Accessor
         {
@@ -28,7 +28,7 @@
         }
     }
 
-    public class OuterCkass4
+    public class OuterClass4
     {
         private protected enum AccessModifier72
         {

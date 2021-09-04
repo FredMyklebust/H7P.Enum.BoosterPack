@@ -42,7 +42,7 @@ namespace H7P.Enum.BoosterPack.Benchmarks
 
     [MemoryDiagnoser]
     [SimpleJob(RuntimeMoniker.Net48), SimpleJob(RuntimeMoniker.Net50), SimpleJob(RuntimeMoniker.NetCoreApp31)]
-    public class ToFastStringBenchmarks
+    public class AsStringBenchmarks
     {
 
         [Params(Size.Pewee, Size.Small, Size.Medium, Size.Large, Size.Huge, Size.Jumbo)]
@@ -50,7 +50,7 @@ namespace H7P.Enum.BoosterPack.Benchmarks
 
         [Benchmark(Baseline = true)] public string DefaultToString() => SizeToBench.ToString();
 
-        [Benchmark] public string ToFastString() => SizeToBench.ToFastString();
+        [Benchmark] public string AsString() => SizeToBench.AsString();
     }
 
     [MemoryDiagnoser]

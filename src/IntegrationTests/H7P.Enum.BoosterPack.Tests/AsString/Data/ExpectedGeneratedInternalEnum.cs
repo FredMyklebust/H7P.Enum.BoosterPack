@@ -1,9 +1,9 @@
 ﻿using System;
-using H7P.FastString.ConsoleApp;
+using H7P.AsString.ConsoleApp;
 
-namespace H7P.FastString.ConsoleApp
+namespace H7P.AsString.ConsoleApp
 {
-	internal static class ƓStateToFastStringExtensions
+	internal static class ƓStateAsStringExtensions
 	{
 		/// <summary>
 		/// Gets the string representation for the supplied <see cref="State"/> value.
@@ -13,7 +13,7 @@ namespace H7P.FastString.ConsoleApp
 		/// <returns>
 		///A <see cref="string"/>.
 		/// </returns>
-		public static string ToFastString(this State enumValue)
+		public static string AsString(this State enumValue)
 		{
 			switch(enumValue)
 			{

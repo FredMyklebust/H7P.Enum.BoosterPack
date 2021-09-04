@@ -1,4 +1,4 @@
-﻿namespace H7P.FastString.ConsoleApp
+﻿namespace H7P.AsString.ConsoleApp
 {
     internal enum State
     {

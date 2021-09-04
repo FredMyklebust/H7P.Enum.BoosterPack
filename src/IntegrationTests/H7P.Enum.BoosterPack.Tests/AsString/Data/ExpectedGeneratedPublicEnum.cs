@@ -1,9 +1,9 @@
 ﻿using System;
-using H7P.FastString.ConsoleApp;
+using H7P.AsString.ConsoleApp;
 
-namespace H7P.FastString.ConsoleApp
+namespace H7P.AsString.ConsoleApp
 {
-	internal static class ƓColorToFastStringExtensions
+	internal static class ƓColorAsStringExtensions
 	{
 		/// <summary>
 		/// Gets the string representation for the supplied <see cref="Color"/> value.
@@ -13,7 +13,7 @@ namespace H7P.FastString.ConsoleApp
 		/// <returns>
 		///A <see cref="string"/>.
 		/// </returns>
-		public static string ToFastString(this Color enumValue)
+		public static string AsString(this Color enumValue)
 		{
 			switch(enumValue)
 			{

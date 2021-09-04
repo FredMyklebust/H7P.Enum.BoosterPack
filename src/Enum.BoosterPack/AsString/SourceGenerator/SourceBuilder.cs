@@ -1,14 +1,13 @@
-﻿using H7P.AutoEnumDescriptor.SourceGenerator.Models;
-using H7P.Enum.BoosterPack.SourceBuilder;
+﻿using H7P.Enum.BoosterPack.SourceBuilder;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace H7P.AutoEnumDescriptor.SourceGenerator.FastString.SourceGenerator
+namespace H7P.Enum.BoosterPack.AsString.SourceGenerator
 {
     public class SourceBuilder
     {
-        public string GenerateSource(FastStringEnum enumItem)
+        public string GenerateSource(AsStringEnum enumItem)
         {
             const string paramName = "enumValue";
 
@@ -27,19 +26,18 @@ namespace H7P.AutoEnumDescriptor.SourceGenerator.FastString.SourceGenerator
                         .AddUsing("System")
                         .AddUsing(enumItem.Namespace)
                         .InNamepace(enumItem.Namespace)
-                        .AddExtensionClass(enumItem.Modifier, $"{enumItem.Name}ToFastStringExtensions")
+                        .AddExtensionClass(enumItem.Modifier, $"{enumItem.Name}AsStringExtensions")
                         .AddExtensionSummaryFormat("Gets the string representation for the supplied <see cref=\"{0}\"/> value.", enumItem.Name)
                         .AddTypedParamTag(paramName, "The enum to get the string representation from.")
                         .AddExceptionTags(exceptions)
                         .AddReturnsTag("A <see cref=\"string\"/>.")
-                        .AddExtensionMethod("ToFastString", "string", paramName)
+                        .AddExtensionMethod("AsString", "string", paramName)
                         .BeginSwitchOn(paramName)
                         .AddReturnCases(caseStatements)
                         .DefaultCaseThrowsArgumentException()
                         .EndExtensionMethod()
                         .EndNamespace()
                         .Build();
-
         }
     }
 }

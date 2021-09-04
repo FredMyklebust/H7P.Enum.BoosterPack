@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 
-namespace H7P.AutoEnumDescriptor.SourceGenerator.Models
+namespace H7P.Enum.BoosterPack.AsString.SourceGenerator
 {
-    public class FastStringEnum
+    public class AsStringEnum
     {
-        public FastStringEnum(string @namespace, string modifier, string name, List<string> values)
+        public AsStringEnum(string @namespace, string modifier, string name, List<string> values)
         {
             Namespace = @namespace;
             Name = name;

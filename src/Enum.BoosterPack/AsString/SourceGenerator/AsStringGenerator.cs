@@ -1,4 +1,3 @@
-using H7P.AutoEnumDescriptor.SourceGenerator.Models;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -7,10 +6,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace H7P.AutoEnumDescriptor.SourceGenerator.FastString.SourceGenerator
+namespace H7P.Enum.BoosterPack.AsString.SourceGenerator
 {
     [Generator]
-    public class FastToStringGenerator : ISourceGenerator
+    public class AsStringGenerator : ISourceGenerator
     {
         private static readonly DiagnosticDescriptor InvalidNodeWarning = new(id: DiagnosticTokens.InvalidNodeId,
                                                                                 title: DiagnosticTokens.InvalidNodeTitle,
@@ -48,13 +47,13 @@ namespace H7P.AutoEnumDescriptor.SourceGenerator.FastString.SourceGenerator
 
             foreach (var source in GenerateSource(enumDetails))
             {
-                context.AddSource($"{source.Key}{nameof(FastToStringGenerator)}", SourceText.From(source.Value, Encoding.UTF8, SourceHashAlgorithm.Sha256));
+                context.AddSource($"{source.Key}{nameof(AsStringGenerator)}", SourceText.From(source.Value, Encoding.UTF8, SourceHashAlgorithm.Sha256));
             }
         }
 
-        private List<FastStringEnum> ExtractEnumDetails(List<(string Namespace, EnumDeclarationSyntax EnumDeclaration)> EnumsDetails)
+        private List<AsStringEnum> ExtractEnumDetails(List<(string Namespace, EnumDeclarationSyntax EnumDeclaration)> EnumsDetails)
         {
-            List<FastStringEnum> enums = new();
+            List<AsStringEnum> enums = new();
 
             foreach (var (Namespace, EnumDeclaration) in EnumsDetails)
             {
@@ -82,7 +81,7 @@ namespace H7P.AutoEnumDescriptor.SourceGenerator.FastString.SourceGenerator
                 var enumKeys = enumValues.Select(e => e.Identifier.Text).ToList();
 
                 var modifier = accessModifier.Text;
-                FastStringEnum enumDetails = new(Namespace, modifier, enumName, enumKeys);
+                AsStringEnum enumDetails = new(Namespace, modifier, enumName, enumKeys);
                 enums.Add(enumDetails);
             }
             return enums;
@@ -96,7 +95,7 @@ namespace H7P.AutoEnumDescriptor.SourceGenerator.FastString.SourceGenerator
                                                                             || m.IsKind(SyntaxKind.PrivateKeyword));
         }
 
-        private Dictionary<string, string> GenerateSource(List<FastStringEnum> enums)
+        private Dictionary<string, string> GenerateSource(List<AsStringEnum> enums)
         {
             Dictionary<string, string> sources = new();
 

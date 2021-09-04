@@ -1,17 +1,17 @@
-﻿using H7P.AutoEnumDescriptor.SourceGenerator.FastString.SourceGenerator;
+﻿using H7P.Enum.BoosterPack.AsString.SourceGenerator;
 using System.Threading.Tasks;
 using Xunit;
-using VerifyCS = CSharpSourceGeneratorVerifier<H7P.AutoEnumDescriptor.SourceGenerator.FastString.SourceGenerator.FastToStringGenerator>;
+using VerifyCS = CSharpSourceGeneratorVerifier<H7P.Enum.BoosterPack.AsString.SourceGenerator.AsStringGenerator>;
 
 namespace H7P.Enum.BoosterPack.IntegrationTests.FastString.Scenarios
 {
-    public class CanGetFastStringTests
+    public class CanGetAsStringTests
     {
-        private const string _testContext = "FastString";
+        private const string _testContext = "AsString";
 
         [Theory]
-        [InlineData("InternalEnumSource.cs", "StateFastToStringGenerator.cs", "ExpectedGeneratedInternalEnum.cs")]
-        [InlineData("PublicEnumSource.cs", "ColorFastToStringGenerator.cs", "ExpectedGeneratedPublicEnum.cs")]
+        [InlineData("InternalEnumSource.cs", "StateAsStringGenerator.cs", "ExpectedGeneratedInternalEnum.cs")]
+        [InlineData("PublicEnumSource.cs", "ColorAsStringGenerator.cs", "ExpectedGeneratedPublicEnum.cs")]
         public async Task When_enums_are_specified_then_extension_method_is_generated(string sourceFileToTest, string expectedGeneratedName, string expectedSourceFromFile)
         {
             var codeToTest = TestSourceCreator.GetSourceContent(_testContext, sourceFileToTest);
@@ -23,7 +23,7 @@ namespace H7P.Enum.BoosterPack.IntegrationTests.FastString.Scenarios
                     Sources = { codeToTest },
                     GeneratedSources =
                     {
-                        TestSourceCreator.CreateExpectedSourceFromFile<FastToStringGenerator>(expectedGeneratedName, _testContext, expectedSourceFromFile)
+                        TestSourceCreator.CreateExpectedSourceFromFile<AsStringGenerator>(expectedGeneratedName, _testContext, expectedSourceFromFile)
                     }
                 },
             }.RunAsync()

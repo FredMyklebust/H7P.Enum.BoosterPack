@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 [assembly: InternalsVisibleTo("H7P.Enum.BoosterPack.IntegrationTests")]
 
-namespace H7P.AutoEnumDescriptor.SourceGenerator.FastString.SourceGenerator
+namespace H7P.Enum.BoosterPack.AsString.SourceGenerator
 {
     internal static class DiagnosticTokens
     {

@@ -1,5 +1,4 @@
 using H7P.AutoEnumDescriptor.SourceGenerator.AutoDescriptor.SourceGenerator;
-using H7P.AutoEnumDescriptor.SourceGenerator.Models;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;

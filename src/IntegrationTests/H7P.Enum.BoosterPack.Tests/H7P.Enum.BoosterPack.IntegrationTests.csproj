@@ -13,10 +13,10 @@
     <Compile Remove="AutoDescriptor\Data\InvalidAccessModifierEnumSource.cs" />
     <Compile Remove="AutoDescriptor\Data\PublicValidEnumSource.cs" />
     <Compile Remove="AutoDescriptor\Scenarios\InvalidAccessModifierEnumSource.cs" />
-    <Compile Remove="FastString\Data\ExpectedGeneratedInternalEnum.cs" />
-    <Compile Remove="FastString\Data\ExpectedGeneratedPublicEnum.cs" />
-    <Compile Remove="FastString\Data\InternalEnumSource.cs" />
-    <Compile Remove="FastString\Data\PublicEnumSource.cs" />
+    <Compile Remove="AsString\Data\ExpectedGeneratedInternalEnum.cs" />
+    <Compile Remove="AsString\Data\ExpectedGeneratedPublicEnum.cs" />
+    <Compile Remove="AsString\Data\InternalEnumSource.cs" />
+    <Compile Remove="AsString\Data\PublicEnumSource.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,19 +35,19 @@
     <Content Include="AutoDescriptor\Data\PublicValidEnumSource.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="FastString\Data\InvalidAccessModifierEnumSource.cs">
+    <Content Include="AsString\Data\InvalidAccessModifierEnumSource.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="FastString\Data\ExpectedGeneratedInternalEnum.cs">
+    <Content Include="AsString\Data\ExpectedGeneratedInternalEnum.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="FastString\Data\ExpectedGeneratedPublicEnum.cs">
+    <Content Include="AsString\Data\ExpectedGeneratedPublicEnum.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="FastString\Data\InternalEnumSource.cs">
+    <Content Include="AsString\Data\InternalEnumSource.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="FastString\Data\PublicEnumSource.cs">
+    <Content Include="AsString\Data\PublicEnumSource.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

@@ -4,7 +4,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace H7P.AutoEnumDescriptor.SourceGenerator.FastString.SourceGenerator
+namespace H7P.Enum.BoosterPack.AsString.SourceGenerator
 {
     internal class EnumSyntaxFinder : ISyntaxReceiver
     {
