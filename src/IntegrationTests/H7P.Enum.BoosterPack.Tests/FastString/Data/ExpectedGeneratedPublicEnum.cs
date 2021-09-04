@@ -9,6 +9,7 @@ namespace H7P.FastString.ConsoleApp
 		/// Gets the string representation for the supplied <see cref="Color"/> value.
 		/// </summary>
 		/// <param name="enumValue">The enum to get the string representation from.</param>
+		/// <exception cref="ArgumentException">Throws if an invalid enum is supplied.</exception>
 		/// <returns>
 		///A <see cref="string"/>.
 		/// </returns>

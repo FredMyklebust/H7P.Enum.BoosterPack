@@ -9,7 +9,7 @@ namespace H7P.AutoDescriptor.ConsoleApp
 		/// Gets the description from the <see cref="System.ComponentModel.DescriptionAttribute"/> for the supplied <see cref="Tilstand"/> value.
 		/// </summary>
 		/// <param name="enumValue">The enum to get descriptions from.</param>
-		/// <exception cref="ArgumentException">Throws if the description for the value is missing, or an invalid value is supplied.</exception>
+		/// <exception cref="ArgumentException">Throws if the enum-value doesn't have a description, or an invalid enum is supplied.</exception>
 		/// <returns>
 		///A <see cref="string"/> with the description.
 		/// </returns>
