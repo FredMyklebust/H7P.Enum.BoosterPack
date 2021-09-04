@@ -56,9 +56,9 @@ var redDescription = Color.Red.GetDescription();
 
 To verify the performance claims, run the provided benchmarks in the project "H7P.Enum.BoosterPack.Benchmarks".
 
-The benchmarks are written using BenchmarkDotNet, and require that you compile the benchmark in release-mode and run them from the command line, which will take some time.
+The benchmarks use [BenchmarkDotNet](https://benchmarkdotnet.org/ "BenchmarkDotnet's Homepage"), and require that you compile the benchmark-project in release-mode and run them from the command line.
 
-I appreciate any suggestions on how to improve the performance even further, please file an issue with example code, or even better an pull requests.
+If you have any suggestions on how to improve the performance even further, please file an issue with some example code, or even better open a pull request.
 
 
 ### Where can I get it?
