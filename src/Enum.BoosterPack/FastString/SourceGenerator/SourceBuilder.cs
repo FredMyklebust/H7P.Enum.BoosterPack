@@ -13,14 +13,19 @@ namespace H7P.AutoEnumDescriptor.SourceGenerator.FastString.SourceGenerator
                                     .Select(v => new ReturnCaseStatement($"{enumItem.Name}.{v}", $"\"{v}\""))
                                     .ToList();
 
+            var paramName = "enumValue";
+
             return ExtensionBuilder
                         .NewExtension(enumItem.Name)
                         .AddUsing("System")
                         .AddUsing(enumItem.Namespace)
                         .InNamepace(enumItem.Namespace)
                         .AddExtensionClass(enumItem.Modifier, $"{enumItem.Name}ToFastStringExtensions")
-                        .AddExtensionMethod("ToFastString", "string", "enumValue")
-                        .BeginSwitchOn("enumValue")
+                        .AddExtensionSummaryFormat("Gets the string representation for the supplied <see cref=\"{0}\"/> value.", enumItem.Name)
+                        .AddTypedParamTag(paramName, "The enum to get the string representation from.")
+                        .AddReturnsTag("A <see cref=\"string\"/>.")
+                        .AddExtensionMethod("ToFastString", "string", paramName)
+                        .BeginSwitchOn(paramName)
                         .AddReturnCases(caseStatements)
                         .DefaultCaseThrowsArgumentException()
                         .EndExtensionMethod()
