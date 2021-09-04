@@ -58,7 +58,7 @@ To verify the performance claims, run the provided benchmarks in the project "H7
 
 The benchmarks are written using BenchmarkDotNet, and require that you compile the benchmark in release-mode and run them from the command line, which will take some time.
 
-I appreciate any suggestions on how to improve the performance even further, please file an issue with example code.
+I appreciate any suggestions on how to improve the performance even further, please file an issue with example code, or even better an pull requests.
 
 
 ### Where can I get it?
