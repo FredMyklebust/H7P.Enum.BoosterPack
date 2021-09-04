@@ -14,12 +14,12 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Release' ">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeBuildOutput>false</IncludeBuildOutput>
-    <Version>0.8.2</Version>
+    <Version>0.9.0</Version>
     <Company>H7 Productions</Company>
     <Product>H7P Enum Boosterpack</Product>
     <PackageId>H7P.Enum.BoosterPack</PackageId>
     <Authors>Fred Myklebust</Authors>
-    <Description>Enum Boosterpack is a set of source generators which creates helpful and performant extension methods for your enums, A fast alternative to ToString(), called ToFastString(), and GetDescription() to extract descriptions from enum values annotated with DescriptionAttributes.</Description>
+    <Description>Enum Boosterpack is a set of source generators which creates helpful and performant extension methods for your enums, A fast alternative to ToString(), called AsString(), and GetDescription() to extract descriptions from enum values annotated with DescriptionAttributes.</Description>
     <Copyright>Copyright 2021 Fred Myklebust</Copyright>
     <AssemblyName>H7P.Enum.BoosterPack</AssemblyName>
     <RootNamespace>H7P.Enum.BoosterPack</RootNamespace>
