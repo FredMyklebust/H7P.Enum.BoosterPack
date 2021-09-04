@@ -19,11 +19,11 @@ The following limitations apply:
 Enum Boosterpack will automatically identify and create AsString() extension methods for your public and internal enums. Declare an enum:
 
 ```csharp
-    internal enum Color
-    {
-        Red,
-        Green
-    }   
+internal enum Color
+{
+    Red,
+    Green
+}   
 ```
 Then in your application code, call AsString() instead of ToString() on your enum-value:
 
@@ -35,15 +35,15 @@ To generate GetDescription() extension methods, add a Describable-attribute to y
 ```csharp
 using H7P.AutoDescriptor;
 
-    [Describable]
-    internal enum Color
-    {
-        [Description("Red as a rose")]
-        Red,
+[Describable]
+internal enum Color
+{
+    [Description("Red as a rose")]
+    Red,
 
-        [Description("Green as the grass")]
-        Green
-    }   
+    [Description("Green as the grass")]
+    Green
+}   
 ```
 Then in your application code, call GetDescription() on the enum-value:
 
